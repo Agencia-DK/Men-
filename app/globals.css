@@ -130,6 +130,13 @@ footer > small { grid-column: 1 / -1; border-top: 1px solid #252a27; padding-top
   .dish-grid { grid-template-columns: 1fr; gap: 45px; }.dish-image { height: 420px; }.dish-info h3 { font-size: 28px; }
   .experience { min-height: 650px; padding: 0 24px; }.experience h2 { font-size: 62px; }.about-strip { grid-template-columns: 1fr; gap: 28px; }.visit { grid-template-columns: 1fr; gap: 45px; }.visit-details { gap: 25px; }.visit-details p { font-size: 18px; }
   footer { grid-template-columns: 1fr; text-align: center; }.footer-brand { margin: auto; }footer > div:nth-of-type(2) { justify-content: center; }footer > small { grid-column: auto; }
-  .modal-card { grid-template-columns: 1fr; max-height: 90vh; overflow-y: auto; }.modal-card > img { min-height: 0; height: 42vh; }.modal-card > div { padding: 38px 27px; }.modal-card h2 { font-size: 42px; }
+  .modal { align-items: end; padding: 14px 14px 0; }
+  .modal-card { grid-template-columns: minmax(0, 1fr); width: 100%; min-width: 0; min-height: 0; max-height: 88dvh; overflow-x: hidden; overflow-y: auto; border-radius: 18px 18px 0 0; box-shadow: 0 -20px 70px rgba(0,0,0,.55); }
+  .modal-card > img { min-width: 0; min-height: 0; width: 100%; height: clamp(220px, 32dvh, 290px); object-position: center; }
+  .modal-card > div { min-width: 0; padding: 30px 25px 38px; }
+  .modal-card h2 { margin-bottom: 18px; font-size: clamp(39px, 12vw, 52px); overflow-wrap: anywhere; }
+  .modal-card p:not(.eyebrow) { margin-bottom: 0; }
+  .modal-card strong { margin-top: 22px; }
+  .modal-close { position: absolute; top: 12px; right: 12px; width: 46px; height: 46px; background: rgba(230,217,196,.96); color: var(--ink); box-shadow: 0 8px 25px rgba(0,0,0,.35); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }.reveal { opacity: 1; transform: none; } }
